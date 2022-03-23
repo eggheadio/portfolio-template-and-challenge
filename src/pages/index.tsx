@@ -3,13 +3,21 @@ import Head from 'next/head'
 import Image from 'next/image'
 
 
+
 const Home: NextPage = () => {
   return (
-      <div className='flex min-h-screen justify-center items-center'>
+    <>
+      <div 
+        className='flex min-h-screen justify-center items-center' 
+        style={{
+          backgroundImage: `url('/assets/background.svg')`,
+        }}
+      >
         <h1 className="text-3xl font-bold">
         Hello world, this is my portfolio
         </h1>
       </div>
+    </>
   )
 }
 

@@ -3,8 +3,8 @@ import Link from "next/link"
 
 const Layout = (props: any) => {
     return (
-    <>
-        <nav className="bg-white">
+    <div>
+        <nav >
             <div className="max-w-4xl mx-auto px-4">
                 <div>
                     <div className="flex justify-between space-x-7">
@@ -53,7 +53,7 @@ const Layout = (props: any) => {
             </div>
         </nav>
             {props.children}
-    </>
+    </div>
     )
 }
 

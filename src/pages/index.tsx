@@ -9,7 +9,7 @@ const Home: NextPage = () => {
     <div
     >
       <div 
-        className='flex min-h-screen justify-center items-center  bg-gradient-to-t from-green-200 to-transparent'
+        className='flex min-h-screen justify-center items-center bg-gradient-to-b  from-[#004466] via-[#00ffa2] to-transparent'
         // style={{
         //   backgroundImage: `url('/assets/background.svg')`,
         //   backgroundSize: `cover`

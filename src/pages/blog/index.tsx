@@ -18,13 +18,18 @@ const Blog: NextPage<{posts: PostType[]}> = ({posts}) => {
           {posts.map((post) => {
             return (
               <Link href={`/blog/${post.slug}`}>
-                <li className='w-full h-36 p-6 m-2 bg-slate-50 rounded hover:bg-slate-200 hover:cursor-pointer hover:py-8 transition-all'>
+                <li className='w-full h-40 p-6 m-4 bg-slate-50 rounded hover:bg-slate-200 hover:cursor-pointer transition-all'>
                   <div className='flex flex-row justify-between'>
-                    <p className='text-xl'>
-                      {post.title}
-                    </p>
-                    <div className='flex flex-col gap-2 my-2'>
-                      <span className='float-right'>{post.date}</span>
+                    <div className=''>
+                      <p className='text-xl'>
+                        {post.title}
+                      </p>
+                      <p className='my-2 w-5/6'>
+                        {post.summary}
+                      </p>
+                    </div>
+                    <div className='flex flex-col gap-2 my-2 justify-center'>
+                      <span className='text-right'>{post.date}</span>
                       {
                         post.tags ?
                         (<ul className='flex flex-row gap-1 justify-end'>
@@ -35,8 +40,6 @@ const Blog: NextPage<{posts: PostType[]}> = ({posts}) => {
                       } 
                     </div>
                   </div>
-                  
-                
                 </li>
               </Link>
             )
@@ -51,7 +54,7 @@ const Blog: NextPage<{posts: PostType[]}> = ({posts}) => {
 
   export async function getStaticProps() {
 
-    const posts = getAllPosts(['slug', 'title', 'tags', 'date'])
+    const posts = getAllPosts(['slug', 'title', 'tags', 'date', 'summary'])
 
     return {
       props: {

@@ -6,35 +6,34 @@ import Image from 'next/image'
 
 const Home: NextPage = () => {
   return (
-    <div
-    >
-      <div 
-        className='flex min-h-screen justify-center items-center bg-gradient-to-b  from-[#004466] via-[#00ffa2] to-transparent'
+    <div className='max-w-4xl'>
+      <section 
+        className='flex min-h-screen w-screen justify-center items-center bg-gradient-to-b  from-[#004466] via-[#00ffa2]  to-[#F2FFFA]'
         // style={{
         //   backgroundImage: `url('/assets/background.svg')`,
         //   backgroundSize: `cover`
         // }}
-      >
+        >
         <div className='flex flex-row items-center'>
           <div className="flex justify-center items-center bg-white w-96 h-96 rounded-lg ">
               <p>put an image here</p>
           </div>
           <div className="ml-4">
             <h1 className="text-3xl font-bold">
-            Hello world, this is my portfolio
+              Hello world, this is my portfolio
             </h1>
             <p className="pt-2 text-base">
               Where I show you my expertise and thoughts as I build
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div>
-        <span>
-          something else
-        </span>
-      </div>
+      <section>
+        <h2 className="text-3xl font-bold">
+              Hello world, this is my portfolio
+        </h2>
+      </section>
     </div>
   )
 }

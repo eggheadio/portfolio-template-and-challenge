@@ -8,14 +8,14 @@ const Blog: NextPage<{posts: PostType[]}> = ({posts}) => {
     return (
       <div className='max-w-4xl mx-auto'>
         <div className='flex justify-center items-center mt-14'>
-          <h1 className="text-3xl font-bold">
+          <h1 className="text-3xl font-bold font-sans">
             Hello world, this is my Blog page
           </h1>
         </div>
         <ul className='mt-10'>
           {posts.map((post) => {
             return (
-              <PostCard post={post} />
+              <PostCard key={post.slug} post={post} />
             )
           })}
         </ul>

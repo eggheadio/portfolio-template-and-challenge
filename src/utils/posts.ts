@@ -21,6 +21,8 @@ export function getPostBySlug(slug: string, fields: string[] = []) {
   const fileContents = fs.readFileSync(fullPath, 'utf8')
   const { data, content } = matter(fileContents)
 
+  console.log({data, content})
+
   type Items = {
     [key: string]: string
   }
@@ -50,5 +52,17 @@ export function getAllPosts(fields: string[] = []) {
     .map((slug) => getPostBySlug(slug, fields))
     // sort posts by date in descending order
     .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+  return posts
+}
+
+export function getFeaturedPosts(fields: string[] = []) {
+  const slugs = getPostSlugs()
+
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug, ["featured", ...fields]))
+    .filter((post) => Boolean(post?.featured))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+
   return posts
 }

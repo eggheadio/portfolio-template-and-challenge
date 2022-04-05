@@ -45,7 +45,6 @@ const Post: NextPage<PagePost> = ({post}) => {
     ])
     const content = await markdownToHtml(post.content || '')
     
-    console.log(post)
     return {
       props: {
         post: {

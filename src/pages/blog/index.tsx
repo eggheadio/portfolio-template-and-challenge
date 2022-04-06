@@ -15,7 +15,7 @@ const Blog: NextPage<{posts: PostType[]}> = ({posts}) => {
         <ul className='mt-10'>
           {posts.map((post) => {
             return (
-              <PostCard key={post.slug} post={post} />
+              <PostCard key={post.slug} post={post}/>
             )
           })}
         </ul>

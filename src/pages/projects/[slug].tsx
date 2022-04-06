@@ -8,6 +8,7 @@ type PageProject = {
 
 
 const Project: NextPage<PageProject> = ({project}) => {
+    console.log(project)
     return (
       <div className='max-w-4xl mx-auto mt-8'>
         <h1 className="text-4xl font-bold mx-auto">
@@ -35,13 +36,13 @@ export default Project
 
 
 
-export async function getStaticProps({ params }: {params: PostType}) {
+export async function getStaticProps({ params }: {params: ProjectType}) {
   const project = getPostBySlug(params.slug, [
     'title',
     'date',
     'slug',
     'content',
-    'ogImage',
+    'details',
     'images',
     'tags',
     'coverImage',
@@ -50,7 +51,7 @@ export async function getStaticProps({ params }: {params: PostType}) {
   
   return {
     props: {
-      post: {
+      project: {
         ...project,
         content,
       },
@@ -59,13 +60,13 @@ export async function getStaticProps({ params }: {params: PostType}) {
 }
 
 export async function getStaticPaths<GetStaticPaths>() {
-  const posts = getProjectPosts(['slug'])
+  const projects = getProjectPosts(['slug'])
 
   return {
-    paths: posts.map((post) => {
+    paths: projects.map((project) => {
       return {
         params: {
-          slug: post.slug,
+          slug: project.slug,
         },
       }
     }),

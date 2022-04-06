@@ -10,7 +10,7 @@ const PostCard  = ({post}: {post: PostType}) => {
               <p className='text-xl'>
                 {post.title}
               </p>
-              <p className='my-2 w-5/6'>
+              <p className='my-2 w-5/6 line-clamp-4'>
                 {post.summary}
               </p>
             </div>

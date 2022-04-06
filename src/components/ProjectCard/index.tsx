@@ -1,18 +1,25 @@
 
 import Link from 'next/link'
+import Image from 'next/image'
+import type { ProjectType } from '../../../types/post'
 
-const ProjectCard  = ({post}: any) => {
-    return (
-      <Link href={`/projects/TODO`}>
-        <div className='w-80 h-96 bg-slate-100 rounded hover:ring-2 ring-secondary  cursor-pointer'>
-            <div className='flex flex-col mx-auto w-fit'>
-            <div className='bg-slate-400 h-40 w-72  mt-4 rounded-lg'><p>put an image of your project here</p></div>
-            <h2 className='w-fit mt-8 text-lg'>Project title</h2>
-            <p className='w-72 mt-4 text-base'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
+const ProjectCard = ({ project }: { project: ProjectType }) => {
+  return (
+    <Link href={`/projects/TODO`}>
+      <div className='px-6 py-8 rounded cursor-pointer w-fit h-fit bg-slate-100 hover:ring-2 ring-secondary'>
+        <div className='flex flex-col mx-auto w-fit'>
+          <div>
+          </div>
+          <Image
+            height={211} width={288}
+            className="rounded-lg"
+            src={project.images[0].src} alt={project.images[0].alt} />
+          <h2 className='mt-8 text-lg w-fit '>{project.title}</h2>
+          <p className='mt-4 text-base w-72 line-clamp-4'>{project.summary}</p>
         </div>
-      </Link>
-    )
-  }
+      </div>
+    </Link>
+  )
+}
 
 export default ProjectCard

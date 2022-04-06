@@ -1,15 +1,13 @@
 import type { NextPage } from 'next'
-import Head from 'next/head'
-import Image from 'next/image'
 import Link from 'next/link'
-import type PostType from '../../types/post'
+import type { PostType, ProjectType } from '../../types/post'
 import PostCard from '../components/PostCard'
 import ProjectCard from '../components/ProjectCard'
-import { getFeaturedPosts } from '../utils/posts'
+import { getFeaturedPosts, getProjectPosts } from '../utils/posts'
 
 
 
-const Home: NextPage<{posts: PostType[]}> = ({posts}) => {
+const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, projects}) => {
   return (
     <div className=''>
       <section 
@@ -68,10 +66,9 @@ const Home: NextPage<{posts: PostType[]}> = ({posts}) => {
             </p>
           </div>
           <div className='grid grid-cols-1 md:grid-cols-2 gap-4 mx-auto w-fit mt-4'>
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
-            <ProjectCard />
+            {projects.map((project) => {
+              return <ProjectCard project={project} />
+            })}
           </div>
       </section>
 
@@ -107,10 +104,12 @@ const Home: NextPage<{posts: PostType[]}> = ({posts}) => {
 export async function getStaticProps() {
 
   const posts = getFeaturedPosts(['slug', 'title', 'tags', 'date', 'summary'])
+  const projects =  getProjectPosts(['slug', 'title', 'tags', 'date', 'summary', 'images', 'details'])
 
   return {
     props: {
-      posts
+      posts,
+      projects
     }
   }
 }

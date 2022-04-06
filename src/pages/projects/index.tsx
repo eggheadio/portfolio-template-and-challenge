@@ -19,7 +19,7 @@ const Projects: NextPage<{ projects: ProjectType[] }> = ({ projects }) => {
   return (
     <>
       {projects.map((project) => {
-        return <Project project={project} />
+        return <Project project={project} key={project.slug} />
       })}
     </>
   )

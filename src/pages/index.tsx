@@ -67,7 +67,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
           </div>
           <div className='grid grid-cols-1 gap-4 mx-auto mt-4 md:grid-cols-2 w-fit'>
             {projects.map((project) => {
-              return <ProjectCard project={project} />
+              return <ProjectCard project={project} key={project.slug} />
             })}
           </div>
       </section>

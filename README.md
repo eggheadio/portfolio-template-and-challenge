@@ -1,4 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Developer Portolio Site Template and Challenge
+
+This project's purpose is to give you a head start on your portfolio site if you are yet to create one as well as give you meaningful challenges that will equip you to build out your portfolio whether you're using this template or not. If you have a site and want to checkout the challenges, visit the [GitHub Project Page](https://github.com/eggheadio/portfolio-template-and-challenge/projects/1).
+
+You can also [sign up for eggheads Developer Portfolio Foundations email course](https://egghead.io/developer-portfolio-foundations) for more information and a guided experience building out your portfolio.
+
+## 🌱 About the Template
+
+This template is built with the minimal set of features required to have a solid developer portfolio. We intentionally kept the design of the site simple as the design itself is not the main focus for many developers. With that being said, feel free to make the site your own design-wise.
+
+This site features About, Blog, Projects, and Resume pages.
+
+Employers want to know who you are, what technical ability you have, how you communicate, and what your work experience is.
+
+### About
+
+This section is here to talk about yourself. Fill in details that you want people and future employers to know about you and possibly provide a picture so we know what you look like.
+
+### Blog
+
+Having the ability to post your learnings, thoughts, and notes to your portfolio site (or your own blog) is huge for showing that you are an avid learner and thinker and know how to communicate with others about technical solutions.
+
+The blog in this template is 100% file based. This means that when you add files into [_posts](https://github.com/eggheadio/portfolio-template-and-challenge/tree/main/_posts), they will be indexed on `/blog` and accessed based on the file name that you provide.
+
+Check out the front matter of the posts provided and you'll notice that you can set a `feature` flag to feature posts on the home page of the site for the articles that you're most proud of and want others to read.
+
+### Projects
+
+Projects are the lynch pin of a developer's portfolio.
+
+Can you execute on a technical project?
+
+This section should answer that question in full detail! Joel Hooks has a [great article on what makes for a stand out business oriented developer portfolio](https://joelhooks.com/developer-portfolio). You might notice that this template and challenges use that article as inspiration.
+
+In this template, project case studies are added to the same `_posts` folder as articles are but you indicate that it is a case study with `project: true` set in the front matter of the article. This will feature the project on the home page section as well as on `/projects`.
+
+### Resume
+
+TODO: build out resume page
 
 ## Getting Started
 

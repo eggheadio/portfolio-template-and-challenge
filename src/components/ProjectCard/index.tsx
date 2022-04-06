@@ -5,7 +5,7 @@ import type { ProjectType } from '../../../types/post'
 
 const ProjectCard = ({ project }: { project: ProjectType }) => {
   return (
-    <Link href={`/projects/TODO`}>
+    <Link href={`/projects/${project.slug}`}>
       <div className='px-6 py-8 rounded cursor-pointer w-fit h-fit bg-slate-100 hover:ring-2 ring-secondary'>
         <div className='flex flex-col mx-auto w-fit'>
           <div>

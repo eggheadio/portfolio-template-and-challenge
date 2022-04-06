@@ -1,54 +1,57 @@
-import type { NextPage, GetStaticPaths, GetStaticProps } from 'next'
-import type {PostType} from '../../../types/post'
-import { getPostBySlug, getAllPosts, markdownToHtml } from '../../utils/posts'
+import type { NextPage } from "next/types"
+import type {ProjectType} from "../../../types/post"
+import { getPostBySlug, getProjectPosts, markdownToHtml } from "../../utils/posts"
 
-type PagePost = {
-  post: PostType
+type PageProject = {
+  project: ProjectType
 }
 
 
-const Post: NextPage<PagePost> = ({post}) => {
+const Project: NextPage<PageProject> = ({project}) => {
     return (
       <div className='max-w-4xl mx-auto mt-8'>
         <h1 className="text-4xl font-bold mx-auto">
-          {post.title}
+          {project.title}
         </h1>
         <div className='flex flex-row gap-2 my-2'>
-          <span>{post.date}</span>
+          <span>{project.date}</span>
           {
-            post.tags ?
+            project.tags ?
               (<ul>
-                {post.tags.map((tag)=> {
+                {project.tags.map((tag)=> {
                   return <li className='bg-green-400 px-2 rounded-xl' key="tag">{tag}</li>
                 })}
               </ul>) : null
           } 
         </div>
-        <article dangerouslySetInnerHTML={{ __html: post.content }} />
+        <article dangerouslySetInnerHTML={{ __html: project.content }} />
       </div>
     )
   }
 
 
   
-export default Post
+export default Project
+
+
 
 export async function getStaticProps({ params }: {params: PostType}) {
-  const post = getPostBySlug(params.slug, [
+  const project = getPostBySlug(params.slug, [
     'title',
     'date',
     'slug',
     'content',
     'ogImage',
+    'images',
     'tags',
     'coverImage',
   ])
-  const content = await markdownToHtml(post.content || '')
+  const content = await markdownToHtml(project.content || '')
   
   return {
     props: {
       post: {
-        ...post,
+        ...project,
         content,
       },
     },
@@ -56,7 +59,7 @@ export async function getStaticProps({ params }: {params: PostType}) {
 }
 
 export async function getStaticPaths<GetStaticPaths>() {
-  const posts = getAllPosts(['slug'])
+  const posts = getProjectPosts(['slug'])
 
   return {
     paths: posts.map((post) => {

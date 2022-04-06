@@ -65,3 +65,15 @@ export function getFeaturedPosts(fields: string[] = []) {
 
   return posts
 }
+
+export function getProjectPosts(fields: string[] = []) {
+  const slugs = getPostSlugs()
+
+  const posts = slugs
+    .map((slug) => getPostBySlug(slug, ["project", ...fields]))
+    .filter((post) => Boolean(post?.project))
+    // sort posts by date in descending order
+    .sort((post1, post2) => (post1.date > post2.date ? -1 : 1))
+
+  return posts
+}

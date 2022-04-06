@@ -1,4 +1,4 @@
-import type PostType from '../../../types/post'
+import type {PostType} from '../../../types/post'
 import Link from 'next/link'
 
 const PostCard  = ({post}: {post: PostType}) => {

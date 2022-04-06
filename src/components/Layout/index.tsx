@@ -1,16 +1,14 @@
 import Image from "next/image"
 import Link from "next/link"
 import React from "react"
+import {
+    Menu,
+    MenuList,
+    MenuButton,
+    MenuLink,
+} from "@reach/menu-button";
 
 const Layout = (props: any) => {
-    let [state, setState] = React.useState(false)
-
-    let hideMenu = state ? "" : "hidden"
-
-    let handleClick = () => {
-        setState(!state)
-    }
-
     return (
     <div>
         <nav>
@@ -27,77 +25,60 @@ const Layout = (props: any) => {
                     <div className="hidden md:flex items-center space-x-1">
                         <Link href="/blog">
                             <a
-                                className="py-4 px-2 text-gray-700  hover:text-primary font-semibold "
+                                className="py-1 px-2 text-gray-700   hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary rounded font-semibold transition-all duration-300"
                                 >Blog</a
                             >
                         </Link>
                         <Link href="/projects">
                             <a
-                                className="py-4 px-2 text-gray-700 font-semibold hover:text-primary transition duration-300"
+                                className="py-1 px-2 text-gray-700 font-semibold  hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary rounded transition-all duration-300"
                                 >Projects</a
                             >
                         </Link>
                         <Link href="/about">
                             <a
-                                className="py-4 px-2 text-gray-700 font-semibold hover:text-primary transition duration-300"
+                                className="py-1 px-2 text-gray-700 font-semibold  hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary rounded transition-all duration-300"
                                 >About</a
                             >
                         </Link>
                         <Link href="/resume">
                             <a
-                                className="py-4 px-2 text-gray-700 font-semibold hover:text-primary transition duration-300"
+                                className="py-1 px-2 text-gray-700 font-semibold  hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary rounded transition-all duration-300"
                                 >Resume</a
                             >
                         </Link>
                     </div>
-                    <div className="relative md:hidden h-fit self-center">
-                        <button type="button" onClick={handleClick} className="text-gray-900 group bg-white rounded-md inline-flex items-center text-base font-medium hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-primary" aria-expanded="false">
-                        <span>Links</span>
-                        <svg className="text-gray-900 ml-2 h-5 w-5 hover:text-gray-900" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
-                            <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
-                        </svg>
-                        </button>
-                        <div className={`absolute z-10 -left-4 transform -translate-x-1/3 mt-3 px-2 w-36 max-w-xs sm:px-0 ${hideMenu}`}>
-                        <div className="rounded shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden">
-                            <div className="relative grid gap-6 bg-white px-5 py-6 sm:gap-8 sm:p-8">
-                                <div className="-m-3 p-3 block rounded-md hover:bg-slate-200">
-                                    <Link href="/blog" >
-                                        <a
-                                            className="py-4 px-2 text-gray-700  hover:text-primary font-semibold "
-                                            >Blog</a
-                                        >
-                                    </Link> 
-                                </div>
-                                <div className="-m-3 p-3 block rounded-md hover:bg-slate-200">
-                                    <Link href="/projects">
-                                        <a
-                                            className="py-4 px-2 text-gray-700 font-semibold hover:text-primary transition duration-300"
-                                            >Projects</a
-                                        >
-                                    </Link>
-                                </div>
-
-                                <div className="-m-3 p-3 block rounded-md hover:bg-slate-200">
-                                    <Link href="/about">
-                                        <a
-                                            className="py-4 px-2 text-gray-700 font-semibold hover:text-primary transition duration-300"
-                                            >About</a
-                                        >
-                                    </Link>
-                                </div>
-
-                                <div className="-m-3 p-3 block rounded-md hover:bg-slate-200">
-                                    <Link href="/resume">
-                                        <a
-                                            className="py-4 px-2 text-gray-700 font-semibold hover:text-primary transition duration-300"
-                                            >Resume</a
-                                        >
-                                    </Link>
-                                </div>
-                            </div>
-                        </div>
-                        </div>
-                    </div>
+                    <Menu className="" >
+                        <MenuButton className="block md:hidden h-fit self-center text-gray-900 text-lg">
+                            Links <span aria-hidden>▾</span>
+                        </MenuButton>
+                        <MenuList className="absolute z-10 -left-8 transform -translate-x-1/3 mt-1 w-36 max-w-xs sm:px-0 rounded shadow-lg ring-1 ring-black ring-opacity-5 overflow-hidden grid bg-white px-5 py-4 sm:p-6">
+                            <MenuLink
+                                as="a"
+                                href="/blog"
+                                className="py-4 px-2 block rounded-md text-gray-700  hover:text-gray-900 hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary font-semibold cursor-pointer text-center">
+                                    Blog
+                            </MenuLink>
+                            <MenuLink
+                                as="a"
+                                href="/projects"
+                                className="py-4 px-2 block rounded-md text-gray-700  hover:text-gray-900 hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary font-semibold cursor-pointer text-center">
+                                    Projects
+                            </MenuLink>
+                            <MenuLink
+                                as="a"
+                                href="/about"
+                                className="py-4 px-2 block rounded-md text-gray-700  hover:text-gray-900 hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary font-semibold cursor-pointer text-center">
+                                    About
+                            </MenuLink>
+                            <MenuLink
+                                as="a"
+                                href="/resume"
+                                className="py-4 px-2 block rounded-md text-gray-700  hover:text-gray-900 hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary font-semibold cursor-pointer text-center">
+                                    Resume
+                            </MenuLink>
+                        </MenuList>
+                    </Menu>
                 </div>
             </div>
         </nav>
@@ -150,22 +131,28 @@ const Layout = (props: any) => {
                       </div>
                     </div>
                     <div>
-                      <h3 className="text-sm font-medium text-gray-900">Site</h3>
+                      <h3 className="text-sm font-medium text-gray-900 px-2">Site</h3>
                       <ul role="list" className="mt-6 space-y-6">
                       <li className="text-sm">
-                            <a className="text-gray-500 hover:text-primary cursor-pointer">
-                              Blog
-                            </a>
+                            <Link href="/blog">
+                              <a className="text-gray-500 px-2 py-1 rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer">
+                                Blog
+                              </a>
+                            </Link>
                           </li>
                           <li className="text-sm">
-                            <a className="text-gray-500 hover:text-primary cursor-pointer">
-                              About
-                            </a>
+                            <Link href="/about">                         
+                              <a className="text-gray-500 px-2 py-1  rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer">
+                                About
+                              </a>
+                            </Link>   
                           </li>
                           <li className="text-sm">
-                            <a className="text-gray-500 hover:text-primary cursor-pointer">
-                              Projects
-                            </a>
+                            <Link href="/projects">
+                              <a className="text-gray-500 px-2 py-1  rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary cursor-pointer">
+                                Projects
+                              </a>
+                            </Link>
                           </li>
                       </ul>
                     </div>
@@ -191,7 +178,7 @@ const Layout = (props: any) => {
                     <div className="ml-4 flex-shrink-0">
                       <button
                         type="submit"
-                        className="w-full bg-primary border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:bg-secondary hover:text-primary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
+                        className="w-full bg-primary border border-transparent rounded-md shadow-sm py-2 px-4 flex items-center justify-center text-base font-medium text-white hover:ring-2 ring-secondary transition-all focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
                       >
                         Sign up
                       </button>

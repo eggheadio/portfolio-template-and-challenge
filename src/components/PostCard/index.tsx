@@ -4,7 +4,7 @@ import Link from 'next/link'
 const PostCard  = ({post}: {post: PostType}) => {
     return (
       <Link href={`/blog/${post.slug}`}>
-        <li className='w-96 min-h-fit sm:w-full sm:h-40 p-6 m-4 bg-slate-50 rounded hover:bg-slate-200 hover:cursor-pointer transition-all'>
+        <li className='w-96 min-h-fit sm:w-5/6 p-6 m-4 bg-slate-50 rounded hover:ring-2 ring-secondary hover:cursor-pointer transition-all mx-auto'>
           <div className='flex flex-row justify-between'>
             <div className=''>
               <p className='text-xl'>

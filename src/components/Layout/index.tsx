@@ -15,7 +15,7 @@ const Layout = (props: any) => {
         <div className="max-w-4xl px-4 mx-auto">
           <div className="flex justify-between space-x-7">
             <Link href="/">
-              <a className="rounded flex items-center px-2 py-4 className='rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline'">
+              <a className="mt-1 rounded flex items-center px-2 py-4 className='rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-secondary hover:no-underline'">
                 <Image src="/assets/eggo.png" alt="an eggo" width={32} height={32} />
                 <span className="ml-2 text-lg font-semibold text-gray-900"
                 >My Name</span
@@ -82,7 +82,7 @@ const Layout = (props: any) => {
           </div>
         </div>
       </nav>
-      <div className="" >
+      <div>
         {props.children}
       </div>
       <footer aria-labelledby="footer-heading" className="mt-56 bg-white border-t border-gray-200">

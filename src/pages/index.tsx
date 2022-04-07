@@ -12,11 +12,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
   return (
     <div className=''>
       <section 
-        className='flex items-center justify-center min-h-screen bg-gradient-to-b from-primary via-secondary to-transparent'
-        // style={{
-        //   backgroundImage: `url('/assets/background.svg')`,
-        //   backgroundSize: `cover`
-        // }}
+        className='flex items-center justify-center min-h-screen'
         >
         <div className='flex flex-row items-center'>
           <div className="ml-4">
@@ -40,7 +36,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
           </div>
           <div className='sm:ml-4'>
             <Link href="/about">
-              <a className="px-2 text-3xl font-bold underline transition-all duration-300 rounded cursor-pointer decoration-primary w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
+              <a className="px-2 text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
                   About Me
               </a>
             </Link>
@@ -58,7 +54,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
 
       <section className='container mx-auto mt-20 sm:max-w-4xl w-fit' >
           <Link  href="/projects">
-            <a className="px-2 text-3xl font-bold underline transition-all duration-300 rounded cursor-pointer decoration-primary w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
+            <a className="px-2 text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
               Projects
             </a>
           </Link>
@@ -78,7 +74,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
 
       <section className='container mx-auto mt-20 sm:max-w-4xl w-fit' >
           <Link href="/blog">
-            <a className="px-2 text-3xl font-bold underline transition-all duration-300 rounded cursor-pointer decoration-primary w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
+            <a className="px-2 text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
               Articles
             </a>
           </Link>

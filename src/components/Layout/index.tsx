@@ -35,21 +35,9 @@ const Layout = (props: any) => {
                 >Projects</a
                 >
               </Link>
-              <Link href="/about">
-                <a
-                  className="px-2 py-1 font-semibold text-gray-700 transition-all duration-300 rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
-                >About</a
-                >
-              </Link>
-              <Link href="/resume">
-                <a
-                  className="px-2 py-1 font-semibold text-gray-700 transition-all duration-300 rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
-                >Resume</a
-                >
-              </Link>
             </div>
             <Menu className="" >
-              <MenuButton className="self-center block text-lg text-gray-900 md:hidden h-fit">
+              <MenuButton className="self-center block text-lg text-gray-700 md:hidden h-fit">
                 Links <span aria-hidden>▾</span>
               </MenuButton>
               <MenuList className="absolute z-10 grid max-w-xs px-5 py-4 mt-1 overflow-hidden transform bg-white rounded shadow-lg -left-8 -translate-x-1/3 w-36 sm:px-0 ring-1 ring-black ring-opacity-5 sm:p-6">
@@ -64,18 +52,6 @@ const Layout = (props: any) => {
                   href="/projects"
                   className="block px-2 py-4 font-semibold text-center text-gray-700 rounded-md cursor-pointer hover:text-gray-900 hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
                   Projects
-                </MenuLink>
-                <MenuLink
-                  as="a"
-                  href="/about"
-                  className="block px-2 py-4 font-semibold text-center text-gray-700 rounded-md cursor-pointer hover:text-gray-900 hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
-                  About
-                </MenuLink>
-                <MenuLink
-                  as="a"
-                  href="/resume"
-                  className="block px-2 py-4 font-semibold text-center text-gray-700 rounded-md cursor-pointer hover:text-gray-900 hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
-                  Resume
                 </MenuLink>
               </MenuList>
             </Menu>
@@ -146,13 +122,6 @@ const Layout = (props: any) => {
                         <Link href="/blog">
                           <a className="px-2 py-1 text-gray-500 rounded cursor-pointer hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
                             Blog
-                          </a>
-                        </Link>
-                      </li>
-                      <li className="text-sm">
-                        <Link href="/about">
-                          <a className="px-2 py-1 text-gray-500 rounded cursor-pointer hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
-                            About
                           </a>
                         </Link>
                       </li>

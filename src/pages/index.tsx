@@ -35,11 +35,9 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
             </p>
           </div>
           <div className='sm:ml-4'>
-            <Link href="/about">
-              <a className="px-2 text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
+              <h2 className="px-2 text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
                   About Me
-              </a>
-            </Link>
+              </h2>
             <div className="mt-4 ">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
               </p>  

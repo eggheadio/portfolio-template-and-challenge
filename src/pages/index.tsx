@@ -10,9 +10,9 @@ import { getFeaturedPosts, getProjectPosts } from '../utils/posts'
 
 const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, projects}) => {
   return (
-    <div className=''>
+    <>
       <section 
-        className='flex items-center justify-center h-screen min-h-full min'
+        className='flex items-center justify-center h-[85vh]'
         >
         <div className='flex flex-row items-center'>
           <div className="m-4 sm:ml-4">
@@ -95,7 +95,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
             </div>
           </div>
       </section>
-    </div>
+    </>
   )
 }
 

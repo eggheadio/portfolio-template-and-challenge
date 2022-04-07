@@ -84,7 +84,7 @@ const Project = ({ project }: { project: ProjectType }) => {
 
             <Link href={`/projects/${project.slug}`}>
               <a
-                className="flex items-center justify-center flex-1 max-w-xs px-8 py-3 mt-4 text-base font-medium text-white border border-transparent rounded-md bg-primary hover:text-primary hover:bg-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-secondary sm:w-full"
+                className="flex items-center justify-center flex-1 max-w-xs px-8 py-3 mt-4 text-base font-medium text-white transition-all duration-300 border border-transparent rounded-md bg-primary hover:bg-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-50 focus:ring-secondary sm:w-full"
               >
                 Read the Case Study <ArrowNarrowRightIcon className='ml-2 h-7 w-7' />
               </a>

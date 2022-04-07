@@ -117,22 +117,22 @@ const Layout = (props: any) => {
                   </div>
                   <div>
                     <h3 className="px-2 text-sm font-medium text-gray-900">Site</h3>
-                    <ul role="list" className="mt-6 space-y-6">
-                      <li className="text-sm">
+                    <div role="list" className="flex mt-6">
+                      <p className="text-sm">
                         <Link href="/blog">
                           <a className="px-2 py-1 text-gray-500 rounded cursor-pointer hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
                             Blog
                           </a>
                         </Link>
-                      </li>
-                      <li className="text-sm">
+                      </p>
+                      <p className="text-sm">
                         <Link href="/projects">
                           <a className="px-2 py-1 text-gray-500 rounded cursor-pointer hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary">
                             Projects
                           </a>
                         </Link>
-                      </li>
-                    </ul>
+                      </p>
+                    </div>
                   </div>
                 </div>
 

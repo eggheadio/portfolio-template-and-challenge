@@ -12,21 +12,21 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
   return (
     <div className=''>
       <section 
-        className='flex items-center justify-center min-h-screen'
+        className='flex items-center justify-center h-screen min-h-full min'
         >
         <div className='flex flex-row items-center'>
-          <div className="ml-4">
+          <div className="m-4 sm:ml-4">
             <h1 className="text-3xl font-bold sm:text-6xl">
               Hello world, this is my portfolio
             </h1>
-            <p className="pt-2 text-base text-center">
+            <p className="pt-2 text-base">
               Where I show you my expertise and thoughts as I build
             </p>
           </div>
         </div>
       </section>
 
-      <section className='container mx-auto my-10 mt-20 sm:max-w-4xl w-fit' >
+      <section className='container p-4 mx-auto my-10 sm:p-0 sm:max-w-4xl w-fit' >
         <div className='flex flex-col justify-center gap-4 mx-auto sm:flex-row w-fit'>
         <div className='flex flex-col justify-between'>
             <Image className="rounded-lg" height={768} width={768} src="/assets/erick-butler-xWGoK1tqxyo-unsplash.jpeg" />
@@ -35,7 +35,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
             </p>
           </div>
           <div className='sm:ml-4'>
-              <h2 className="px-2 text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
+              <h2 className="text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
                   About Me
               </h2>
             <div className="mt-4 ">
@@ -50,49 +50,49 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
         </div>
       </section>
 
-      <section className='container mx-auto mt-20 sm:max-w-4xl w-fit' >
+      <section className='container p-4 mx-auto mt-20 sm:p-0 sm:max-w-4xl w-fit' >
           <Link  href="/projects">
-            <a className="px-2 text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
+            <a className="text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
               Projects
             </a>
           </Link>
-          <div className="p-4 mt-4 w-96 sm:w-auto">
+          <div className="mt-4 w-96 sm:w-auto">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </p>  
             <p>
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru.
             </p>
           </div>
-          <div className='grid grid-cols-1 gap-4 mx-auto mt-4 md:grid-cols-2 w-fit'>
+          <div className='grid grid-cols-1 gap-4 mx-auto mt-6 md:grid-cols-2 w-fit'>
             {projects.map((project) => {
               return <ProjectCard project={project} key={project.slug} />
             })}
           </div>
       </section>
 
-      <section className='container mx-auto mt-20 sm:max-w-4xl w-fit' >
+      <section className='container p-4 mx-auto mt-20 sm:p-0 sm:max-w-4xl w-fit' >
           <Link href="/blog">
-            <a className="px-2 text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
+            <a className="text-3xl font-bold transition-all duration-300 rounded cursor-pointer w-fit hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline">
               Articles
             </a>
           </Link>
-          <div className="p-4 mt-4 w-96 sm:w-auto">
+          <div className="mt-4 w-96 sm:w-auto">
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
             </p>  
-            <p>
+            <p className='mt-2'>
               Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laboru.
             </p>
           </div>
           <div>
             <div className='flex items-center justify-center'>
             </div>
-            <ul className='mt-4'>
+            <div className='mt-6'>
               {posts.map((post) => {
                 return (
                   <PostCard key={post.slug} post={post} />
                 )
               })}
-            </ul>
+            </div>
           </div>
       </section>
     </div>

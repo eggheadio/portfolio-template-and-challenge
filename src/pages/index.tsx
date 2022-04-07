@@ -35,7 +35,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
         <div className='flex flex-col justify-between'>
             <Image className="rounded-lg" height={768} width={768} src="/assets/erick-butler-xWGoK1tqxyo-unsplash.jpeg" />
             <p className='mt-2 text-sm text-gray-400'>
-              Photo by  <a href="https://unsplash.com/@erickwalterbutler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Erick Butler</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+              Photo by  <a className='rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline' href="https://unsplash.com/@erickwalterbutler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Erick Butler</a> on <a className='rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline' href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </p>
           </div>
           <div className='sm:ml-4'>

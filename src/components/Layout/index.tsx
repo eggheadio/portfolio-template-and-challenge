@@ -15,7 +15,7 @@ const Layout = (props: any) => {
         <div className="max-w-4xl px-4 mx-auto">
           <div className="flex justify-between space-x-7">
             <Link href="/">
-              <a href="#" className="flex items-center px-2 py-4">
+              <a className="rounded flex items-center px-2 py-4 className='rounded hover:ring-2 ring-secondary focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary hover:no-underline'">
                 <Image src="/assets/eggo.png" alt="an eggo" width={32} height={32} />
                 <span className="ml-2 text-lg font-semibold text-gray-900"
                 >My Name</span
@@ -105,7 +105,7 @@ const Layout = (props: any) => {
                     <div role="list" className="flex flex-row gap-2 mt-6 align-middle">            
                       <a
                         href="https://github.com/eggheadio/portfolio-template-and-challenge" 
-                        className="cursor-pointer"
+                        className="rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
                       >
                         <Image
                           src="/assets/github.svg"
@@ -116,7 +116,7 @@ const Layout = (props: any) => {
                       </a>
                       <a 
                         href="https://twitter.com/eggheadio"
-                        className="cursor-pointer"
+                        className="rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
                       >
                         <Image
                           src="/assets/twitter.svg"
@@ -127,7 +127,7 @@ const Layout = (props: any) => {
                       </a>
                       <a 
                         href="https://www.linkedin.com/company/egghead.io"
-                        className="cursor-pointer"
+                        className="rounded cursor-pointer focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-secondary"
                       >
                         <Image
                           src="/assets/linkedin.svg"

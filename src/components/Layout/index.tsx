@@ -102,8 +102,11 @@ const Layout = (props: any) => {
                 <div className="grid grid-cols-1 gap-y-12 sm:col-span-2 sm:grid-cols-2 sm:gap-x-8">
                   <div>
                     <h3 className="text-sm font-medium text-gray-900">Links</h3>
-                    <div role="list" className="flex flex-row gap-2 mt-6 align-middle">
-                      <a className="cursor-pointer">
+                    <div role="list" className="flex flex-row gap-2 mt-6 align-middle">            
+                      <a
+                        href="https://github.com/eggheadio/portfolio-template-and-challenge" 
+                        className="cursor-pointer"
+                      >
                         <Image
                           src="/assets/github.svg"
                           alt="an eggo"
@@ -111,7 +114,10 @@ const Layout = (props: any) => {
                           height={20}
                         />
                       </a>
-                      <a className="cursor-pointer">
+                      <a 
+                        href="https://twitter.com/eggheadio"
+                        className="cursor-pointer"
+                      >
                         <Image
                           src="/assets/twitter.svg"
                           alt="an eggo"
@@ -119,7 +125,10 @@ const Layout = (props: any) => {
                           height={20}
                         />
                       </a>
-                      <a className="cursor-pointer">
+                      <a 
+                        href="https://www.linkedin.com/company/egghead.io"
+                        className="cursor-pointer"
+                      >
                         <Image
                           src="/assets/linkedin.svg"
                           alt="linked in"

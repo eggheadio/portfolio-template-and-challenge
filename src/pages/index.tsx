@@ -33,7 +33,7 @@ const Home: NextPage<{posts: PostType[], projects: ProjectType[]}> = ({posts, pr
       <section className='container mx-auto my-10 mt-20 sm:max-w-4xl w-fit' >
         <div className='flex flex-col justify-center gap-4 mx-auto sm:flex-row w-fit'>
         <div className='flex flex-col justify-between'>
-            <Image className="rounded-lg" height={384} width={384} src="/assets/erick-butler-xWGoK1tqxyo-unsplash.jpeg" />
+            <Image className="rounded-lg" height={768} width={768} src="/assets/erick-butler-xWGoK1tqxyo-unsplash.jpeg" />
             <p className='mt-2 text-sm text-gray-400'>
               Photo by  <a href="https://unsplash.com/@erickwalterbutler?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Erick Butler</a> on <a href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
             </p>
